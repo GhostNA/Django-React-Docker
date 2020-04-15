@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: backend.dockerfile
+      args:
+        env: dev
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: frontend.dockerfile
+      args:
+        FRONTEND_ENV: dev
