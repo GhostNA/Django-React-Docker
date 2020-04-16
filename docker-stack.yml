@@ -35,8 +35,8 @@ services:
         aliases:
         - localhost
     ports:
-    - published: 8888
-      target: 8888
+    - published: 8000
+      target: 8000
     volumes:
     - /home/nab/data/dev/stack-simple/backend/app:/app:rw
   db:
@@ -53,6 +53,9 @@ services:
         FRONTEND_ENV: dev
       context: /home/nab/data/dev/stack-simple/frontend
       dockerfile: frontend.dockerfile
+    ports:
+    - published: 80
+      target: 80
   pgadmin:
     depends_on:
     - db

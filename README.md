@@ -1,4 +1,4 @@
-# Offline App
+# Tech stack "Simple"
 
 ## Backend Requirements
 
