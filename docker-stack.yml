@@ -11,13 +11,12 @@ services:
     environment:
       BACKEND_CORS_ORIGINS: http://localhost, http://localhost:4200, http://localhost:3000,
         http://localhost:8080, https://localhost, https://localhost:4200, https://localhost:3000,
-        https://localhost:8080, http://dev.offline-app.com, https://stag.offline-app.com,
-        https://offline-app.com, http://local.dockertoolbox.tiangolo.com, http://localhost.tiangolo.com
+        https://localhost:8080
       EMAILS_FROM_EMAIL: info@offline-app.com
       FIRST_SUPERUSER: admin@offline-app.com
       FIRST_SUPERUSER_PASSWORD: Password123$$
       POSTGRES_DB: app
-      POSTGRES_PASSWORD: 795b6cf9664ad956cd3e9b5804d6a9af8bbaf5115904944cd05debd518f1f274
+      POSTGRES_PASSWORD: 795b6cf9664ad956cd3e9b5804d6a9adff782y3487yf04385g4944cd05debd518f1f274
       POSTGRES_SERVER: db
       POSTGRES_USER: postgres
       PROJECT_NAME: Offline App
@@ -44,7 +43,7 @@ services:
     environment:
       PGDATA: /var/lib/postgresql/data/pgdata
       POSTGRES_DB: app
-      POSTGRES_PASSWORD: 795b6cf9664ad956cd3e9b5804d6a9af8bbaf5115904944cd05debd518f1f274
+      POSTGRES_PASSWORD: 795b6cf9664ad956cd3e9b5804d6a9adff782y3487yf04385g4944cd05debd518f1f274
       POSTGRES_SERVER: db
       POSTGRES_USER: postgres
     image: postgres:11

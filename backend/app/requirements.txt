@@ -1,0 +1,20 @@
+passlib[bcrypt]
+tenacity
+requests
+emails
+uvicorn
+gunicorn
+pyjwt
+python-multipart
+email_validator
+jinja2
+psycopg2-binary
+SQLAlchemy
+ptvsd
+remote-pdb
+
+# Django
+Django
+djangorestframework
+markdown
+django-filter
