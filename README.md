@@ -83,6 +83,8 @@ npm install
 npm start
 ```
 
-Then open your browser at http://localhost
+Notice that this live server is not running inside Docker, it is for local development, and that is the recommended workflow. Once you are happy with your frontend, you can build the frontend Docker image and start it, to test it in a production-like environment. But compiling the image at every change will not be as productive as running the local development server.
+
+Then open your browser at http://localhost:3000
 
 Check the file `package.json` to see other available options.
