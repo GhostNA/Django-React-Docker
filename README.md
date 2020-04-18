@@ -13,6 +13,13 @@
 
 * Start the stack with Docker Compose:
 
+1. cd directory frontend/app and run:
+
+```bash
+npm install
+```
+2. Run in root directory
+
 ```bash
 docker-compose up -d
 ```
