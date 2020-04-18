@@ -9,17 +9,16 @@ services:
     depends_on:
     - db
     environment:
-      BACKEND_CORS_ORIGINS: http://localhost, http://localhost:4200, http://localhost:3000,
-        http://localhost:8080, https://localhost, https://localhost:4200, https://localhost:3000,
+      BACKEND_CORS_ORIGINS: http://localhost, http://localhost:8080, https://localhost,
         https://localhost:8080
-      EMAILS_FROM_EMAIL: info@offline-app.com
-      FIRST_SUPERUSER: admin@offline-app.com
+      EMAILS_FROM_EMAIL: info@app.com
+      FIRST_SUPERUSER: admin@app.com
       FIRST_SUPERUSER_PASSWORD: Password123$$
       POSTGRES_DB: app
       POSTGRES_PASSWORD: 795b6cf9664ad956cd3e9b5804d6a9adff782y3487yf04385g4944cd05debd518f1f274
       POSTGRES_SERVER: db
       POSTGRES_USER: postgres
-      PROJECT_NAME: Offline App
+      PROJECT_NAME: App
       SECRET_KEY: da41d8b1eda63060c8d699f66e6fc47ea4551ae3d6098aa62a465c14ef8455bd
       SENTRY_DSN: ''
       SERVER_HOST: https://localhost
@@ -53,9 +52,13 @@ services:
         FRONTEND_ENV: dev
       context: /home/nab/data/dev/stack-simple/frontend
       dockerfile: frontend.dockerfile
+    command: npm start
     ports:
     - published: 80
-      target: 80
+      target: 3000
+    stdin_open: true
+    volumes:
+    - /home/nab/data/dev/stack-simple/frontend/app:/app:rw
   pgadmin:
     depends_on:
     - db
@@ -67,5 +70,5 @@ services:
     ports:
     - published: 5050
       target: 5050
-version: '3.3'
+version: '3.8'
 

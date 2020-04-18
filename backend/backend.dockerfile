@@ -8,5 +8,3 @@ RUN pip install -r requirements.txt
 
 ENV PYTHONPATH=/app
 ENV PTVSD_DEBUG 1
-
-EXPOSE 80
